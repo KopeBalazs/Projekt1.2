@@ -1,4 +1,4 @@
-package com.example.adminapp;
+package com.example.userapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
