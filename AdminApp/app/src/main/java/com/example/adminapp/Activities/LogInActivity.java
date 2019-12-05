@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.adminapp.Classes.FireBaseAdapter;
 import com.example.adminapp.R;
 
-import org.w3c.dom.Text;
 
 public class LogInActivity extends AppCompatActivity {
 
@@ -20,24 +20,26 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-        init();
-        openGroupViewActivity();
-        if(nameValidation()){
-
-        }
+        //init();
+        //openGroupViewActivity();
+        //FireBaseAdapter db=new FireBaseAdapter();
+        //db.addStringValueToDatabase("Kosar","Groups.1.Name");
     }
 
     private void init(){
         EditText nameText= (EditText) findViewById(R.id.nameInputText);
         Button button= (Button) findViewById(R.id.signInButton);
 
-        Intent openGroupViewActivity= new Intent();
+        //Intent openGroupViewActivity= new Intent();
 
         String adminNameMessage= nameText.getText().toString();
     }
+
     private boolean nameValidation(){
+
         return false;
     }
+
     private void openGroupViewActivity(){
 
     }
