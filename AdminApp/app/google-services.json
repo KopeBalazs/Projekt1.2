@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "906988916866",
+    "firebase_url": "https://projekt1-f849e.firebaseio.com",
+    "project_id": "projekt1-f849e",
+    "storage_bucket": "projekt1-f849e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906988916866:android:922e641030874dc26f649b",
+        "android_client_info": {
+          "package_name": "com.example.adminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "906988916866-of2j61fj4q68etv6qs3v5qlpkjgm94mm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn8U0sdqIp8k4WFNrWlBNtJipKZkRSKog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "906988916866-of2j61fj4q68etv6qs3v5qlpkjgm94mm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
