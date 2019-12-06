@@ -3,4 +3,5 @@
     <string name="SignInTextView">Sign In</string>
     <string name="NameTextView">Name</string>
     <string name="EnterYourNameHint">Enter your name</string>
+    <string name="groupsInstructionTxt">You can open and edit groups by tapping on them. Or create a new one!</string>
 </resources>
