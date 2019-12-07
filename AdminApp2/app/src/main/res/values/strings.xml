@@ -4,4 +4,9 @@
     <string name="NameTextView">Name</string>
     <string name="EnterYourNameHint">Enter your name</string>
     <string name="groupsInstructionTxt">You can open and edit groups by tapping on them. Or create a new one!</string>
+    <string name="textCreateGroup">Create new group!</string>
+
+    <string name="textNewGroupName">Group name</string>
+    <string name="textNewGroupDescription">Description</string>
+    <string name="textButtonCreateNewGroup">Create</string>
 </resources>

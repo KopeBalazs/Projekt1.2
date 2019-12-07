@@ -23,7 +23,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Context mContext;
 
     public RecyclerViewAdapter(Context mContext, ArrayList<String> mGroupNames) {
-        //this.mGroupNames = mGroupNames;
+        this.mGroupNames = mGroupNames;
         this.mContext = mContext;
     }
 
@@ -39,6 +39,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder");
         holder.textGroupName.setText(mGroupNames.get(position));
+
         holder.parentLayout.setOnClickListener(new View.OnClickListener(){
 
             @Override

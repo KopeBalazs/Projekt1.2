@@ -50,7 +50,7 @@ public class LogInActivity extends AppCompatActivity {
         signInButton = (Button) findViewById(R.id.signInButton);
         viewGroupsIntent = new Intent(this, ViewGroupsActivity.class);
         mDBRef = FirebaseDatabase.getInstance().getReference("Admins");;
-        mQuery= mDBRef.orderByChild("Admin");
+        mQuery= mDBRef.orderByChild("Admins");
         nameIsTakenToast=Toast.makeText(getApplicationContext(), "This name is already taken. Please choose another one!", Toast.LENGTH_LONG);
         nameIsTooShortToast=Toast.makeText(getApplicationContext(), "This name is too short! It needs to be at least 3 characters!", Toast.LENGTH_LONG);
 
