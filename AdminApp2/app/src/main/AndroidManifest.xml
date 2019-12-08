@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.ViewGroupsActivity"></activity>
-        <activity android:name=".Activities.LogInActivity">
+        <activity android:name="com.adminapp2.views.ViewGroupsActivity"></activity>
+        <activity android:name="com.adminapp2.views.LogInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
