@@ -1,6 +1,8 @@
 package com.adminapp2.models;
 
-public class Role {
+import java.io.Serializable;
+
+public class Role implements Serializable {
 
     private String id;
 

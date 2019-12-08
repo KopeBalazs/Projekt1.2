@@ -9,4 +9,5 @@
     <string name="textNewGroupName">Group name</string>
     <string name="textNewGroupDescription">Description</string>
     <string name="textButtonCreateNewGroup">Create</string>
+    <string name="textEnterNewGroupName">Enter new group name</string>
 </resources>

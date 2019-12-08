@@ -1,9 +1,11 @@
 package com.adminapp2.models;
 
+import java.io.Serializable;
+
 /**
  *
  */
-public class Group {
+public class Group implements Serializable {
 
     private String id;
 
@@ -53,5 +55,14 @@ public class Group {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Group{" +
+                "id='" + id + '\'' +
+                ", adminId='" + adminId + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

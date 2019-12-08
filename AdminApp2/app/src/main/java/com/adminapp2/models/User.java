@@ -1,9 +1,8 @@
 package com.adminapp2.models;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.io.Serializable;
 
-public class User implements Parcelable {
+public class User implements Serializable {
 
     private String id;
 
@@ -13,9 +12,9 @@ public class User implements Parcelable {
 
     private Role role;
 
-    public User(String id, Group group, String name, Role role) {
+    public User(String id, /*Group group,*/ String name, Role role) {
         this.id = id;
-        this.group = group;
+        //this.group = group;
         this.name = name;
         this.role = role;
     }
@@ -30,13 +29,13 @@ public class User implements Parcelable {
         this.id = id;
     }
 
-    public Group getGroup() {
+   /* public Group getGroup() {
         return group;
     }
 
     public void setGroup(Group group) {
         this.group = group;
-    }
+    }*/
 
     public String getName() {
         return name;
@@ -72,19 +71,8 @@ public class User implements Parcelable {
     public String toString() {
         return "User{" +
                 "id='" + id + '\'' +
-                ", group=" + group +
                 ", name='" + name + '\'' +
                 ", role=" + role +
                 '}';
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-
     }
 }
