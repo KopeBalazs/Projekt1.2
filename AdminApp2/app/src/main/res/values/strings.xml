@@ -10,4 +10,7 @@
     <string name="textNewGroupDescription">Description</string>
     <string name="textButtonCreateNewGroup">Create</string>
     <string name="textEnterNewGroupName">Enter new group name</string>
+
+    <string name="textEnterNewQuestion">Enter new question</string>
+    <string name="textTapToActivateQuestion">Tap to activate question!</string>
 </resources>

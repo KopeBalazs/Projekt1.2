@@ -1,8 +1,7 @@
-package com.adminapp2.models;
+package com.example.userapp2.Models;
+
 
 import java.io.Serializable;
-import java.sql.Timestamp;
-import java.util.Date;
 
 public class Question implements Serializable {
 
@@ -15,20 +14,16 @@ public class Question implements Serializable {
     /** Duration*/
     private long duration;
 
-    /** {@link Group} object*/
-    private Group group;
-
     /** Kerdes */
     private String value;
 
     /** Aktiv vagy nem */
     private boolean state;
 
-    public Question(String id, String timeStamp, long duration, Group group, String value, boolean state) {
+    public Question(String id, String timeStamp, long duration, String value, boolean state) {
         this.id = id;
         this.timeStamp = timeStamp;
         this.duration = duration;
-        this.group = group;
         this.value = value;
         this.state = state;
     }
@@ -69,14 +64,6 @@ public class Question implements Serializable {
 
     public void setDuration(long duration) {
         this.duration = duration;
-    }
-
-    public Group getGroup() {
-        return group;
-    }
-
-    public void setGroup(Group group) {
-        this.group = group;
     }
 
     public String getValue() {

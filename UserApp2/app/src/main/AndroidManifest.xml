@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.adminapp2">
+    package="com.example.userapp2">
 
     <application
         android:allowBackup="true"
@@ -9,16 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.adminapp2.views.Activities.ViewTopicActivity"></activity>
-        <activity android:name="com.adminapp2.views.Activities.ViewQuestionsInGroupsActivity" />
-        <activity android:name="com.adminapp2.views.Activities.ViewGroupsActivity" />
-        <activity android:name="com.adminapp2.views.Activities.LogInActivity">
+        <activity android:name=".Views.ActivityJoinGroup">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Views.ActivityVoting" />
+        <activity android:name=".Views.ActivityJoinQuestion"></activity>
     </application>
 
 </manifest>
