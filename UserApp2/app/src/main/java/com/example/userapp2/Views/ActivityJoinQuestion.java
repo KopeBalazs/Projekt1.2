@@ -33,6 +33,7 @@ public class ActivityJoinQuestion extends AppCompatActivity {
     private ArrayList<String> questionStringsOfTheActGroup=new ArrayList<>();
     private Group actGroup;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
