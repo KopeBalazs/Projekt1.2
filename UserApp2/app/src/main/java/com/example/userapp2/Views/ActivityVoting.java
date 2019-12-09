@@ -79,6 +79,119 @@ public class ActivityVoting extends AppCompatActivity {
 
                         db.addStringValueToDatabase(question.getId(), "Votes."+nextID+".QID");
                         db.addStringValueToDatabase("ID2", "Votes."+nextID+".UID");
+                        db.addLongValueToDatabase(1, "Votes."+nextID+".Vote");
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDBRef = FirebaseDatabase.getInstance().getReference("Votes");
+                mQuery = mDBRef.orderByChild("Votes");
+
+                mQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot mySnapshot : dataSnapshot.getChildren()) {
+                            mTableIDs.add(mySnapshot.getKey().toString());  //Table IDs
+                        }
+                        int tmpId=Integer.parseInt(mTableIDs.get(mTableIDs.size()-1).substring(2))+1;
+                        //System.out.println("tmpId= "+tmpId);
+                        nextID="ID"+tmpId;
+
+                        db.addStringValueToDatabase(question.getId(), "Votes."+nextID+".QID");
+                        db.addStringValueToDatabase("ID2", "Votes."+nextID+".UID");
+                        db.addLongValueToDatabase(2, "Votes."+nextID+".Vote");
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDBRef = FirebaseDatabase.getInstance().getReference("Votes");
+                mQuery = mDBRef.orderByChild("Votes");
+
+                mQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot mySnapshot : dataSnapshot.getChildren()) {
+                            mTableIDs.add(mySnapshot.getKey().toString());  //Table IDs
+                        }
+                        int tmpId=Integer.parseInt(mTableIDs.get(mTableIDs.size()-1).substring(2))+1;
+                        //System.out.println("tmpId= "+tmpId);
+                        nextID="ID"+tmpId;
+
+                        db.addStringValueToDatabase(question.getId(), "Votes."+nextID+".QID");
+                        db.addStringValueToDatabase("ID2", "Votes."+nextID+".UID");
+                        db.addLongValueToDatabase(3, "Votes."+nextID+".Vote");
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDBRef = FirebaseDatabase.getInstance().getReference("Votes");
+                mQuery = mDBRef.orderByChild("Votes");
+
+                mQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot mySnapshot : dataSnapshot.getChildren()) {
+                            mTableIDs.add(mySnapshot.getKey().toString());  //Table IDs
+                        }
+                        int tmpId=Integer.parseInt(mTableIDs.get(mTableIDs.size()-1).substring(2))+1;
+                        //System.out.println("tmpId= "+tmpId);
+                        nextID="ID"+tmpId;
+
+                        db.addStringValueToDatabase(question.getId(), "Votes."+nextID+".QID");
+                        db.addStringValueToDatabase("ID2", "Votes."+nextID+".UID");
+                        db.addLongValueToDatabase(4, "Votes."+nextID+".Vote");
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+        });
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDBRef = FirebaseDatabase.getInstance().getReference("Votes");
+                mQuery = mDBRef.orderByChild("Votes");
+
+                mQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot mySnapshot : dataSnapshot.getChildren()) {
+                            mTableIDs.add(mySnapshot.getKey().toString());  //Table IDs
+                        }
+                        int tmpId=Integer.parseInt(mTableIDs.get(mTableIDs.size()-1).substring(2))+1;
+                        //System.out.println("tmpId= "+tmpId);
+                        nextID="ID"+tmpId;
+
+                        db.addStringValueToDatabase(question.getId(), "Votes."+nextID+".QID");
+                        db.addStringValueToDatabase("ID2", "Votes."+nextID+".UID");
                         db.addLongValueToDatabase(5, "Votes."+nextID+".Vote");
                     }
                     @Override
