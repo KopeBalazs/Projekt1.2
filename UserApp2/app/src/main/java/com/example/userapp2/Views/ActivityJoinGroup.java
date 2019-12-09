@@ -34,6 +34,7 @@ public class ActivityJoinGroup extends AppCompatActivity {
     private DatabaseReference mDBRef;
     private ArrayList<Group> groups;
     private ArrayList<String> mTableIDs =new ArrayList<>();
+    private String userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +44,18 @@ public class ActivityJoinGroup extends AppCompatActivity {
         uploadGroupsListAndRecyclerView();
     }
 
+    private String getUserNameFromIntent() {
+        String userName;
+        userName = (String) getIntent().getSerializableExtra("userName");
+        return userName;
+    }
+
     private void init() {
 
         mDBRef = FirebaseDatabase.getInstance().getReference("Groups");
         mQuery = mDBRef.orderByChild("Groups");
         groups=new ArrayList<>();
+        userName=getUserNameFromIntent();
     }
 
     private void uploadGroupsListAndRecyclerView() {
@@ -94,7 +102,7 @@ public class ActivityJoinGroup extends AppCompatActivity {
     private void initRecyclerView(List<String> nameList, ArrayList<Group> groups){
         // Log.d(TAG, "initRecyclerView: init recyclerview."+findViewById(R.id.recyclerView));
         RecyclerView recyclerView= findViewById(R.id.recyclerView);
-        RecyclerViewAdapterGroup adapter=new RecyclerViewAdapterGroup(this, nameList, groups);
+        RecyclerViewAdapterGroup adapter=new RecyclerViewAdapterGroup(this, nameList, groups, userName);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

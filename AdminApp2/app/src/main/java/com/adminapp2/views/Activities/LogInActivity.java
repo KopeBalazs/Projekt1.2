@@ -32,7 +32,6 @@ public class LogInActivity extends AppCompatActivity {
     private static final String TAG = "myLogs";
     private EditText nameText;
     private Button signInButton;
-    private String adminName;
     private FireBaseAdapter db = new FireBaseAdapter();
     private Intent intentViewGroups;
     private Query mQuery;

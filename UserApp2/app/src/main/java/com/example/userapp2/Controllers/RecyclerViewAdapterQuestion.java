@@ -14,10 +14,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.userapp2.Models.Group;
 import com.example.userapp2.Models.Question;
 import com.example.userapp2.R;
-import com.example.userapp2.Views.ActivityJoinQuestion;
 import com.example.userapp2.Views.ActivityVoting;
 
 import java.util.ArrayList;
@@ -31,11 +29,13 @@ public class RecyclerViewAdapterQuestion extends RecyclerView.Adapter<RecyclerVi
     private ArrayList<Question> questions;
     private Intent intentStartViewQuestions;
     private Bundle bundle=new Bundle();
+    private String userName;
 
-    public RecyclerViewAdapterQuestion(Context mContext, List<String> mGroupNames, ArrayList<Question> questions) {
-        this.mQuestions = mGroupNames;
+    public RecyclerViewAdapterQuestion(Context mContext, List<String> mQuestions, ArrayList<Question> questions, String userName) {
+        this.mQuestions = mQuestions;
         this.mContext = mContext;
         this.questions= questions;
+        this.userName =userName;
     }
 
     @NonNull
@@ -59,6 +59,7 @@ public class RecyclerViewAdapterQuestion extends RecyclerView.Adapter<RecyclerVi
                 Toast.makeText(mContext, mQuestions.get(position), Toast.LENGTH_SHORT).show();
                 intentStartViewQuestions = new Intent(mContext, ActivityVoting.class);
                 bundle.putSerializable("question", questions.get(position));
+                bundle.putSerializable("userName", userName);
                 intentStartViewQuestions.putExtras(bundle);
                 mContext.startActivity(intentStartViewQuestions);
             }

@@ -29,11 +29,13 @@ public class RecyclerViewAdapterGroup extends RecyclerView.Adapter<RecyclerViewA
     private ArrayList<Group> groups;
     private Intent intentStartViewQuestions;
     private Bundle bundle=new Bundle();
+    private String userName;
 
-    public RecyclerViewAdapterGroup(Context mContext, List<String> mGroupNames, ArrayList<Group> groups) {
+    public RecyclerViewAdapterGroup(Context mContext, List<String> mGroupNames, ArrayList<Group> groups, String userName) {
         this.mGroupNames = mGroupNames;
         this.mContext = mContext;
         this.groups= groups;
+        this.userName = userName;
     }
 
     @NonNull
@@ -57,6 +59,7 @@ public class RecyclerViewAdapterGroup extends RecyclerView.Adapter<RecyclerViewA
                 Toast.makeText(mContext, mGroupNames.get(position), Toast.LENGTH_SHORT).show();
                 intentStartViewQuestions = new Intent(mContext, ActivityJoinQuestion.class);
                 bundle.putSerializable("adminsGroups", groups.get(position));
+                bundle.putSerializable("userName", userName);
                 intentStartViewQuestions.putExtras(bundle);
                 mContext.startActivity(intentStartViewQuestions);
             }

@@ -32,6 +32,7 @@ public class ActivityJoinQuestion extends AppCompatActivity {
     private DatabaseReference mDBRef;
     private ArrayList<String> questionStringsOfTheActGroup=new ArrayList<>();
     private Group actGroup;
+    private String userName;
 
 
     @Override
@@ -47,10 +48,15 @@ public class ActivityJoinQuestion extends AppCompatActivity {
         groupTmp= (Group) getIntent().getSerializableExtra("adminsGroups");
         return groupTmp;
     }
+    private String getUserNameFromIntent() {
+        String userName;
+        userName= (String) getIntent().getSerializableExtra("userName");
+        return userName;
+    }
 
     private void init(){
         actGroup=getGroupFromIntent();
-
+        userName=getUserNameFromIntent();
     }
 
     private void uploadQuestionsListAndRecyclerView() {
@@ -106,7 +112,7 @@ public class ActivityJoinQuestion extends AppCompatActivity {
     private void initRecyclerView(List<String> nameList, ArrayList<Question> questions){
         // Log.d(TAG, "initRecyclerView: init recyclerview."+findViewById(R.id.recyclerView));
         RecyclerView recyclerView= findViewById(R.id.recyclerView);
-        RecyclerViewAdapterQuestion adapter=new RecyclerViewAdapterQuestion(this, nameList, questions);
+        RecyclerViewAdapterQuestion adapter=new RecyclerViewAdapterQuestion(this, nameList, questions, userName);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
